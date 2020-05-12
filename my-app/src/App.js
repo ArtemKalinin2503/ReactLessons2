@@ -133,11 +133,13 @@ class App extends Component {
         return (
             <div className="app__wrapper">
                 <AppHeader done={doneCount} todoCount={todoCount}/>
-                <SearchPanel onSearchChange={this.onSearchChange}/>
-                <ItemStatusFilter
-                    filter={this.state.filter}
-                    onFilterChange={this.onFilterChange}
-                />
+                <div className="filter__wrapper">
+                    <SearchPanel onSearchChange={this.onSearchChange}/>
+                    <ItemStatusFilter
+                        filter={this.state.filter}
+                        onFilterChange={this.onFilterChange}
+                    />
+                </div>
                 <TodoList
                     todos={visibleTodo}
                     onDeleted={this.deleteItem} //Передача метода в качестве props
