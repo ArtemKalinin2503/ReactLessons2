@@ -14,6 +14,8 @@ const TodoList = (props) => {
                                 key={item.id}
                                 { ...item } //Так можно передать сразу всех props
                                 onDeleted={() => props.onDeleted(item.id)}
+                                onToggleImportant={() => props.onToggleImportant(item.id)}
+                                onToggleDone={() => props.onToggleDone(item.id)}
                             />
                         </li>
                     )
